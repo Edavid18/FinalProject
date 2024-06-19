@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
 /**
  * FXML Controller class
@@ -20,11 +21,7 @@ import javafx.scene.control.TextField;
 public class SingUpController implements Initializable {
 
     @FXML
-    private TextField texto;
-    @FXML
-    private Label etiqueta;
-    @FXML
-    private Button boton;
+    private Pane pane;
 
     /**
      * Initializes the controller class.
