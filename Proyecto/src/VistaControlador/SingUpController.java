@@ -22,6 +22,8 @@ public class SingUpController implements Initializable {
 
     @FXML
     private Pane pane;
+    @FXML
+    private TextField email;
 
     /**
      * Initializes the controller class.
@@ -31,5 +33,6 @@ public class SingUpController implements Initializable {
         // TODO
     }    
    
+    
     
 }
