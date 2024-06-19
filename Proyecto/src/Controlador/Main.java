@@ -27,11 +27,13 @@ public class Main extends Application{
 
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("/Vista/SingUp.fxml"));
+            loader.setLocation(Main.class.getResource("/Vista/LogIn.fxml"));
             Pane ventana = (Pane) loader.load();
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(ventana);
+            Stage stage = new Stage();
+            
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
