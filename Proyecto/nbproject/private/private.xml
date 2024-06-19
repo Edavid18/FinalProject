@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/FinalProject/Proyecto/src/CssVista/vista1.css</file>
-            <file>file:/D:/FinalProject/Proyecto/src/Controlador/Main.java</file>
-            <file>file:/D:/FinalProject/Proyecto/src/Vista/SingUp.fxml</file>
-            <file>file:/D:/FinalProject/Proyecto/src/CssVista/singup.css</file>
-            <file>file:/D:/FinalProject/Proyecto/src/VistaControlador/Vista1Controller.java</file>
-            <file>file:/D:/FinalProject/Proyecto/src/VistaControlador/SingUpController.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/LogIn/LogIn.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Vista/SingUp.fxml</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/SingUpController.java</file>
         </group>
     </open-files>
 </project-private>

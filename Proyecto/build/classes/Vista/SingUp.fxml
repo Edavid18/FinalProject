@@ -25,14 +25,14 @@
       <Pane id="panel" fx:id="pane" layoutX="342.0" layoutY="57.0" prefHeight="476.0" prefWidth="409.0" stylesheets="@../CssVista/singup.css">
          <children>
             <Label id="label2" layoutX="21.0" layoutY="161.0" prefHeight="18.0" prefWidth="89.0" stylesheets="@../CssVista/singup.css" text="Password" />
-            <Button id="Log" layoutX="21.0" layoutY="274.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="356.0" stylesheets="@../CssVista/singup.css" text="Log in" />
+            <Button id="Log" layoutX="21.0" layoutY="274.0" mnemonicParsing="false" onAction="#TestMethod" prefHeight="39.0" prefWidth="356.0" stylesheets="@../CssVista/singup.css" text="Log in" />
             <Label id="Texto" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="110.0" layoutY="14.0" prefHeight="18.0" prefWidth="176.0" stylesheets="@../CssVista/singup.css" text="Welcome Again!">
                <font>
                   <Font name="Eras Bold ITC" size="14.0" />
                </font>
             </Label>
-            <TextField id="Data" layoutX="21.0" layoutY="110.0" prefHeight="39.0" prefWidth="356.0" promptText="type your Email" stylesheets="@../CssVista/singup.css" />
-            <PasswordField id="Data" layoutX="21.0" layoutY="187.0" prefHeight="39.0" prefWidth="356.0" promptText="type your password" stylesheets="@../CssVista/singup.css" />
+            <TextField id="Data" fx:id="email" layoutX="21.0" layoutY="110.0" prefHeight="39.0" prefWidth="356.0" promptText="type your Email" stylesheets="@../CssVista/singup.css" />
+            <PasswordField id="Data" fx:id="password" layoutX="21.0" layoutY="187.0" prefHeight="39.0" prefWidth="356.0" promptText="type your password" stylesheets="@../CssVista/singup.css" />
             <Label id="label2" layoutX="21.0" layoutY="83.0" prefHeight="18.0" prefWidth="42.0" stylesheets="@../CssVista/singup.css" text="Email" />
             <Label id="label1" layoutX="167.0" layoutY="392.0" stylesheets="@../CssVista/singup.css" text="First time?" />
             <Button id="SignUp" layoutX="166.0" layoutY="410.0" mnemonicParsing="false" stylesheets="@../CssVista/singup.css" text="Sign Up" />

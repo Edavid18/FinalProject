@@ -4,8 +4,10 @@
  */
 package VistaControlador;
 
+import Authentication.Authentication;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -22,6 +24,9 @@ public class SingUpController implements Initializable {
 
     @FXML
     private Pane pane;
+    Authentication list = new Authentication();
+    public TextField email;
+    public TextField password;
 
     /**
      * Initializes the controller class.
@@ -30,6 +35,11 @@ public class SingUpController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void TestMethod(ActionEvent event) {
+        list.LogIn(email, password);
+    }
    
     
 }
