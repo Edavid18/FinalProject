@@ -39,7 +39,7 @@ public class Vista1Controller implements Initializable {
     @FXML
     private void Cambiar(ActionEvent event) {
         try{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/SingUp.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/SignUp.fxml"));
         Parent root = loader.load();
         LogInController controlador = loader.getController();
         Scene scene = new Scene(root);
