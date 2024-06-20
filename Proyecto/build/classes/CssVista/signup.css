@@ -49,3 +49,12 @@
     -fx-text-fill: gray;
     -fx-font-size:16px;
 }
+#back{
+    -fx-background-color: transparent;
+    -fx-font-family: "JetBrains Mono";     
+    -fx-text-fill: white; 
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-underline: true;
+    -fx-font-size:20px;
+}

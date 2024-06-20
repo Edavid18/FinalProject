@@ -47,5 +47,6 @@
             <Image url="@../images/signup.png" />
          </image>
       </ImageView>
+      <Button id="back" layoutX="45.0" layoutY="509.0" mnemonicParsing="false" onAction="#Back" stylesheets="@../CssVista/signup.css" text="Back" />
    </children>
 </AnchorPane>
