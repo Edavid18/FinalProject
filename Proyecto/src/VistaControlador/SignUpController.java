@@ -4,6 +4,7 @@
  */
 package VistaControlador;
 
+import Authentication.Authentication;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,6 +15,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -22,6 +26,20 @@ import javafx.stage.Stage;
  * @author milof
  */
 public class SignUpController implements Initializable {
+    
+    
+    @FXML
+    private TextField name;
+    @FXML
+    private TextField lname;
+    @FXML
+    private TextField email;
+    @FXML
+    private TextField phone;
+    @FXML
+    private PasswordField password;
+    @FXML
+    private Button signUp;
 
     /**
      * Initializes the controller class.
@@ -50,6 +68,13 @@ public class SignUpController implements Initializable {
         catch(IOException ex){
            
         }
+    }
+
+    @FXML
+    private void SignUp(ActionEvent event) {
+        Authentication list = new Authentication();
+        list.registerInFile(email, password, phone, name, lname);
+        list.overWriteFile();
     }
     
 }

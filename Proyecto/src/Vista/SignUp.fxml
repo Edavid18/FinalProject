@@ -19,11 +19,11 @@
    <children>
       <Pane id="panel" layoutX="619.0" prefHeight="579.0" prefWidth="554.0" stylesheets="@../CssVista/signup.css">
          <children>
-            <TextField id="info" layoutX="77.0" layoutY="184.0" prefHeight="28.0" prefWidth="198.0" promptText="First Name" stylesheets="@../CssVista/signup.css" />
-            <TextField id="info" layoutX="285.0" layoutY="184.0" prefHeight="28.0" prefWidth="186.0" promptText="Last Name" stylesheets="@../CssVista/signup.css" />
-            <TextField id="info" layoutX="77.0" layoutY="249.0" prefHeight="28.0" prefWidth="396.0" promptText="\@example.com" stylesheets="@../CssVista/signup.css" />
-            <TextField id="info" layoutX="77.0" layoutY="317.0" prefHeight="28.0" prefWidth="396.0" promptText="+57 3205792086" stylesheets="@../CssVista/signup.css" />
-            <Button id="boton" layoutX="75.0" layoutY="446.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="396.0" stylesheets="@../CssVista/signup.css" text="Sign Up" />
+            <TextField id="info" fx:id="name" layoutX="77.0" layoutY="184.0" prefHeight="28.0" prefWidth="198.0" promptText="First Name" stylesheets="@../CssVista/signup.css" />
+            <TextField id="info" fx:id="lname" layoutX="285.0" layoutY="184.0" prefHeight="28.0" prefWidth="186.0" promptText="Last Name" stylesheets="@../CssVista/signup.css" />
+            <TextField id="info" fx:id="email" layoutX="77.0" layoutY="249.0" prefHeight="28.0" prefWidth="396.0" promptText="\@example.com" stylesheets="@../CssVista/signup.css" />
+            <TextField id="info" fx:id="phone" layoutX="77.0" layoutY="317.0" prefHeight="28.0" prefWidth="396.0" promptText="+57 3205792086" stylesheets="@../CssVista/signup.css" />
+            <Button id="boton" fx:id="signUp" layoutX="75.0" layoutY="446.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="28.0" prefWidth="396.0" stylesheets="@../CssVista/signup.css" text="Sign Up" />
             <Label id="titulo" layoutX="182.0" layoutY="14.0" stylesheets="@../CssVista/signup.css" text="Create an account">
                <font>
                   <Font name="Eras Bold ITC" size="12.0" />
@@ -37,7 +37,7 @@
             <Label id="Data" layoutX="78.0" layoutY="226.0" prefHeight="17.0" prefWidth="84.0" stylesheets="@../CssVista/signup.css" text="Email" />
             <Label id="Data" layoutX="78.0" layoutY="294.0" prefHeight="17.0" prefWidth="216.0" stylesheets="@../CssVista/signup.css" text="Phone Number" />
             <Label id="Data" layoutX="78.0" layoutY="361.0" prefHeight="17.0" prefWidth="238.0" stylesheets="@../CssVista/signup.css" text="Password" />
-            <PasswordField id="info" layoutX="77.0" layoutY="384.0" prefHeight="28.0" prefWidth="396.0" promptText="•••••••••••" stylesheets="@../CssVista/signup.css" />
+            <PasswordField id="info" fx:id="password" layoutX="77.0" layoutY="384.0" prefHeight="28.0" prefWidth="396.0" promptText="•••••••••••" stylesheets="@../CssVista/signup.css" />
             <Separator layoutX="76.0" layoutY="486.0" prefHeight="8.0" prefWidth="396.0" />
             <Label id="terms" layoutX="139.0" layoutY="523.0" stylesheets="@../CssVista/signup.css" text="Please read carefully before proceeding. Welcome!" />
          </children>

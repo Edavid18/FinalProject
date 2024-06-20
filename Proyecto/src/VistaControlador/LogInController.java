@@ -4,6 +4,7 @@
  */
 package VistaControlador;
 
+import Authentication.Authentication;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -27,10 +29,15 @@ import javafx.stage.Stage;
  */
 public class LogInController implements Initializable {
 
+    
     @FXML
     private Pane pane;
     @FXML
     private TextField email;
+    @FXML
+    private Button logIn;
+    @FXML
+    private PasswordField password;
 
     /**
      * Initializes the controller class.
@@ -60,6 +67,12 @@ public class LogInController implements Initializable {
            
         }
         
+    }
+
+    @FXML
+    private void LogIn(ActionEvent event) {
+        Authentication list = new Authentication();
+        list.LogIn(email, password);
     }
    
     
