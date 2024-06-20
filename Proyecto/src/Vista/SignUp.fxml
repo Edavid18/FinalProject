@@ -3,6 +3,8 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,30 +12,34 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1172.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="VistaControlador.SignUpController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1172.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaControlador.SignUpController">
     <stylesheets>
         <URL value="@/CssVista/signup.css" />
     </stylesheets>
    <children>
-      <Pane id="panel" layoutX="615.0" prefHeight="579.0" prefWidth="554.0" stylesheets="@../CssVista/signup.css">
+      <Pane id="panel" layoutX="619.0" prefHeight="579.0" prefWidth="554.0" stylesheets="@../CssVista/signup.css">
          <children>
-            <TextField layoutX="105.0" layoutY="184.0" prefHeight="25.0" prefWidth="198.0" />
-            <TextField layoutX="320.0" layoutY="183.0" />
-            <TextField layoutX="303.0" layoutY="294.0" />
-            <TextField layoutX="105.0" layoutY="249.0" prefHeight="25.0" prefWidth="396.0" />
-            <TextField layoutX="131.0" layoutY="333.0" />
-            <Button layoutX="148.0" layoutY="441.0" mnemonicParsing="false" text="Button" />
-            <Label id="titulo" layoutX="206.0" layoutY="19.0" stylesheets="@../CssVista/signup.css" text="Create an account">
+            <TextField id="info" layoutX="77.0" layoutY="184.0" prefHeight="28.0" prefWidth="198.0" promptText="First Name" stylesheets="@../CssVista/signup.css" />
+            <TextField id="info" layoutX="285.0" layoutY="184.0" prefHeight="28.0" prefWidth="186.0" promptText="Last Name" stylesheets="@../CssVista/signup.css" />
+            <TextField id="info" layoutX="77.0" layoutY="249.0" prefHeight="28.0" prefWidth="396.0" promptText="\@example.com" stylesheets="@../CssVista/signup.css" />
+            <TextField id="info" layoutX="77.0" layoutY="317.0" prefHeight="28.0" prefWidth="396.0" promptText="+57 3205792086" stylesheets="@../CssVista/signup.css" />
+            <Button id="boton" layoutX="75.0" layoutY="446.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="396.0" stylesheets="@../CssVista/signup.css" text="Sign Up" />
+            <Label id="titulo" layoutX="182.0" layoutY="14.0" stylesheets="@../CssVista/signup.css" text="Create an account">
                <font>
                   <Font name="Eras Bold ITC" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="71.0" layoutY="466.0" text="Label" />
-            <Label layoutX="105.0" layoutY="161.0" prefHeight="17.0" prefWidth="69.0" text="First Name" />
-            <Label id="text" layoutX="118.0" layoutY="68.0" stylesheets="@../CssVista/signup.css" text="Creating a new account is easy. Simply fill out the form on the " />
-            <Label id="text" layoutX="139.0" layoutY="87.0" prefHeight="17.0" prefWidth="293.0" stylesheets="@../CssVista/signup.css" text="page and enjoy the advantages of having an account" />
-            <Label layoutX="320.0" layoutY="159.0" prefHeight="17.0" prefWidth="67.0" text="Last Name" />
-            <Label layoutX="106.0" layoutY="226.0" text="Label" />
+            <Label id="terms" layoutX="78.0" layoutY="506.0" prefHeight="17.0" prefWidth="548.0" stylesheets="@../CssVista/signup.css" text="By registering on our website, you agree to our terms and conditions." />
+            <Label id="Data" layoutX="77.0" layoutY="161.0" prefHeight="17.0" prefWidth="111.0" stylesheets="@../CssVista/signup.css" text="First Name" />
+            <Label id="text" layoutX="65.0" layoutY="62.0" stylesheets="@../CssVista/signup.css" text="Creating a new account is easy. Simply fill out the form on the " />
+            <Label id="text" layoutX="95.0" layoutY="87.0" prefHeight="25.0" prefWidth="385.0" stylesheets="@../CssVista/signup.css" text="page and enjoy the advantages of having an account" />
+            <Label id="Data" layoutX="287.0" layoutY="161.0" prefHeight="17.0" prefWidth="111.0" stylesheets="@../CssVista/signup.css" text="Last Name" />
+            <Label id="Data" layoutX="78.0" layoutY="226.0" prefHeight="17.0" prefWidth="84.0" stylesheets="@../CssVista/signup.css" text="Email" />
+            <Label id="Data" layoutX="78.0" layoutY="294.0" prefHeight="17.0" prefWidth="216.0" stylesheets="@../CssVista/signup.css" text="Phone Number" />
+            <Label id="Data" layoutX="78.0" layoutY="361.0" prefHeight="17.0" prefWidth="238.0" stylesheets="@../CssVista/signup.css" text="Password" />
+            <PasswordField id="info" layoutX="77.0" layoutY="384.0" prefHeight="28.0" prefWidth="396.0" promptText="•••••••••••" stylesheets="@../CssVista/signup.css" />
+            <Separator layoutX="76.0" layoutY="486.0" prefHeight="8.0" prefWidth="396.0" />
+            <Label id="terms" layoutX="139.0" layoutY="523.0" stylesheets="@../CssVista/signup.css" text="Please read carefully before proceeding. Welcome!" />
          </children>
       </Pane>
       <ImageView fitHeight="580.0" fitWidth="629.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
