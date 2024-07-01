@@ -1,0 +1,60 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#panel{
+    -fx-background-color: white;
+    
+    
+}
+
+#titulo{
+    -fx-font-family:"Inter";
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+#boton{
+    -fx-background-color: black;
+    -fx-font-family: "Inter";     
+    -fx-text-fill: white; 
+    -fx-font-weight: bold;
+    
+    -fx-background-radius: 4px;
+    
+}
+
+
+#Data{
+    
+    -fx-font-weight: bold;
+}
+
+#info{
+    -fx-border-width:0.1px;
+     -fx-border-color:grey; 
+      -fx-border-radius: 2px;
+    -fx-background-radius:2px;
+    -fx-font-family: "Inter"; 
+}
+
+#terms{
+    -fx-text-fill: gray;
+}
+
+#text{
+    -fx-text-fill: gray;
+    -fx-font-size:16px;
+}
+#back{
+    -fx-background-color: transparent;
+    -fx-font-family: "JetBrains Mono";     
+    -fx-text-fill: white; 
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-underline: true;
+    -fx-font-size:20px;
+}
