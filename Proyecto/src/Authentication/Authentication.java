@@ -20,6 +20,8 @@ public class Authentication {
 
     node cab;
     
+    public String userLoggedIn;
+    
     public Authentication(){
         getInfoFile();
     }
@@ -113,6 +115,8 @@ public class Authentication {
             printw = new PrintWriter(file);
             
             boolean newNode = addNewNodeEnd(username, password, phone, name, lastName);
+            System.out.println("in register in file");
+            PrintList();
             
             if (newNode) {
                 node p = cab;
@@ -125,6 +129,9 @@ public class Authentication {
                     printw.println(p.lastName);
                     p = p.after;
                 }while(p!=cab);
+                
+                System.out.println("after writing on file");
+                PrintList();
 
                 Message("Data saved in file.");
             }else{
@@ -143,12 +150,21 @@ public class Authentication {
         }
     }
     
+    public void PrintList(){
+        node x = cab;
+        do {
+            System.out.println(x.username);
+            x = x.after;
+        } while (x!=cab);
+    }
+    
     public void overWriteFile(){
         FileWriter file = null;
         PrintWriter printw = null;
         try {
             file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Authentication/users.txt");
             printw = new PrintWriter(file);
+            
             
             node p = cab;
             if(p!=null){
@@ -176,25 +192,31 @@ public class Authentication {
         }
     }
     
-    public void LogIn(TextField username, TextField password){
+    public boolean LogIn(TextField username, TextField password){
         String user = username.getText();
         String pw = password.getText();
+        
+        System.out.println("in login");
+        PrintList();
         
         node q = cab;
         if (q != null) {
             do{
                 if (user.equals(q.username) && pw.equals(q.password)) {
                     Message("Logged in!");
-                    return;
+                    userLoggedIn = user;
+                    return true;
                 }else if (user.equals(q.username) && !(pw.equals(q.password))){
                     Message("The password is incorrect");
-                    return;
+                    return false;
                 }
                 q = q.after;
             }while(q!=cab);
             Message("The user does not seem to exist.");
+            return false;
         }else{
             Message("There is no user registered.");
+            return false;
         }
     }
     

@@ -5,6 +5,7 @@
 package VistaControlador;
 
 import Authentication.Authentication;
+import static VistaControlador.LogInController.list;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,7 +27,6 @@ import javafx.stage.Stage;
  * @author milof
  */
 public class SignUpController implements Initializable {
-    
     
     @FXML
     private TextField name;
@@ -50,7 +50,7 @@ public class SignUpController implements Initializable {
     }    
 
     @FXML
-    private void Back(ActionEvent event) {
+    private void Back(ActionEvent event){
         try{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/LogIn.fxml"));
         Parent root = loader.load();
@@ -72,9 +72,7 @@ public class SignUpController implements Initializable {
 
     @FXML
     private void SignUp(ActionEvent event) {
-        Authentication list = new Authentication();
         list.registerInFile(email, password, phone, name, lname);
-        list.overWriteFile();
     }
     
 }

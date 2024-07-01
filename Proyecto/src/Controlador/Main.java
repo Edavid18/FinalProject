@@ -4,6 +4,9 @@
  */
 package Controlador;
 
+import Date.fecha;
+import ShoppingCart.ShoppingCart;
+import static VistaControlador.LogInController.list;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -29,13 +32,16 @@ public class Main extends Application{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("/Vista/LogIn.fxml"));
             Pane ventana = (Pane) loader.load();
-
+            
+            
             // Show the scene containing the root layout.
             Scene scene = new Scene(ventana);
-            Stage stage = new Stage();
-            
             primaryStage.setScene(scene);
             primaryStage.show();
+            
+            fecha date = new fecha();
+            date.changeMonth();
+            
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -44,8 +50,4 @@ public class Main extends Application{
     public static void main(String[] args) {
         launch(args);
     }
-   
-   
-
-    
 }
