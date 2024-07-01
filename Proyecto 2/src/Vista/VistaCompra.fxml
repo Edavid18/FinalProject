@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="978.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaControlador.VistaCompraController">
+   <bottom>
+      <Pane prefHeight="54.0" prefWidth="978.0" style="-fx-background-color: rgba(61, 158, 83, 1);" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <Pane prefHeight="54.0" prefWidth="922.0" style="-fx-background-color: rgba(242, 232, 207, 1);" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="25.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LOGO%202.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <VBox prefHeight="453.0" prefWidth="97.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane fx:id="panelinfo" prefHeight="453.0" prefWidth="326.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Nameproduct" layoutX="32.0" layoutY="24.0" prefHeight="36.0" prefWidth="187.0" style="-fx-font-family: Inter; -fx-font-weight: bold;" text="Product Name">
+               <font>
+                  <Font name="Constantia" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="80.0" prefHeight="21.0" prefWidth="14.0" style="-fx-font-family: Dubai;" text="\$">
+               <font>
+                  <Font name="Constantia" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="price" layoutX="56.0" layoutY="80.0" prefHeight="41.0" prefWidth="87.0" style="-fx-font-family: Dubai;" text="199.99">
+               <font>
+                  <Font name="Constantia" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="134.0" layoutY="80.0" prefHeight="41.0" prefWidth="53.0" style="-fx-font-family: Dubai;" text="USD">
+               <font>
+                  <Font name="Constantia" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="140.0" prefHeight="28.0" prefWidth="80.0" style="-fx-font-family: Dubai;" text="Free shiping" textFill="#3d9e53">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="116.0" layoutY="140.0" prefHeight="28.0" prefWidth="120.0" style="-fx-font-family: Dubai; -fx-font-weight: bold;" text="to all the country">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="205.0" prefHeight="28.0" prefWidth="80.0" style="-fx-font-family: Dubai;" text="Free return" textFill="#3d9e53">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="233.0" prefHeight="30.0" prefWidth="207.0" style="-fx-font-family: Dubai;" text="You have 30 days from when you receive it." textFill="#949494">
+               <font>
+                  <Font name="Constantia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="168.0" prefHeight="30.0" prefWidth="231.0" style="-fx-font-family: Dubai;" text="Know the shipping times and methods." textFill="#949494">
+               <font>
+                  <Font name="Constantia" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="buy" layoutX="51.0" layoutY="370.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="224.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold;" text="Buy">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="51.0" layoutY="415.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="224.0" style="-fx-background-color: rgba(0, 0, 0, 0.72); -fx-text-fill: white; -fx-font-weight: bold;" text="Add to Cart">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutX="10.0" layoutY="24.0" orientation="VERTICAL" prefHeight="428.0" prefWidth="6.0" style="-fx-background-color: balck; -fx-border-color: transparent; -fx-border-width: 1px;" />
+            <Label layoutX="36.0" layoutY="273.0" prefHeight="28.0" prefWidth="120.0" style="-fx-font-family: Dubai; -fx-font-weight: bold;" text="On Stock">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="101.0" layoutY="273.0" prefHeight="30.0" prefWidth="84.0" style="-fx-font-family: Dubai;" text="(50 Available)" textFill="#949494">
+               <font>
+                  <Font name="Constantia" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="36.0" layoutY="303.0" prefHeight="25.0" prefWidth="246.0" />
+         </children>
+      </Pane>
+   </right>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="image" fitHeight="346.0" fitWidth="346.0" layoutX="104.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/canas1/shimano-ocea-plugger.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
