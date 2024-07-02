@@ -15,16 +15,14 @@ public class Product {
     public String name;
     public String price;
     public String image;
-    public String description;
-    public String stock;
+    public String amount;
     public String id;
 
-    public Product(String name, String price, String image, String description, String category, String stock, String id) {
+    public Product(String name, String price, String image, String category, String cant, String id) {
         this.name = name;
         this.price = price;
         this.image = image;
-        this.description = description;
-        this.stock = stock;
+        this.amount = cant;
         this.id = id;
     }
     
@@ -32,8 +30,7 @@ public class Product {
         this.name = "";
         this.price = "";
         this.image = "";
-        this.description = "";
-        this.stock = "";
+        this.amount = "";
         this.id = "";
     }
     

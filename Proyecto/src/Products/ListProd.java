@@ -67,7 +67,7 @@ public class ListProd {
                             return;
                         }
                     case 1:
-                        prod.name = linea.trim();
+                        prod.name = linea;
                         i++;
                         break;
                     
@@ -75,19 +75,14 @@ public class ListProd {
                         prod.price = linea.trim();
                         i++;
                         break;
-                    
-                    case 3:
-                        prod.description = linea;
-                        i++;
-                        break;
                         
-                    case 4:
-                        prod.stock = linea.trim();
+                    case 3:
+                        prod.image = linea.trim();
                         i++;
                         break;
                     
-                    case 5:
-                        prod.image = linea.trim();
+                    case 4:
+                        prod.amount = linea.trim();
                         listProd.add(prod);
                         prod = new Product();
                         i=0;

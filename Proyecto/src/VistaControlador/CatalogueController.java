@@ -4,15 +4,22 @@
  */
 package VistaControlador;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -117,12 +124,75 @@ public class CatalogueController implements Initializable {
 
     @FXML
     private void rs270(MouseEvent event) {
-        obj.cambiar("RS 270",539.99,"1002","/images/botes/lb-rs27ew.png");
+        obj.cambiar("RS 270",539.99,"6007","/images/botes/lb-rs27ew.png");
     }
 
     @FXML
     private void g2(MouseEvent event) {
-        obj.cambiar("Sexo",100,"10001","/images/canas1/ugly-stik-gx2.jpg");
+        obj.cambiar("Sexo",100,"1002","/images/canas1/ugly-stik-gx2.jpg");
+    }
+
+    @FXML
+    private void goToShoppingCart(ActionEvent event) {
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/ShoppingCart.fxml"));
+        Parent root = loader.load();
+        ShoppingCartController controlador = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+       // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
+        stage.setScene(scene);
+        
+        stage.show();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+        
+        }
+        catch(IOException ex){
+           
+        }
+    }
+
+    @FXML
+    private void goToLogIn(ActionEvent event) {
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/LogIn.fxml"));
+        Parent root = loader.load();
+        LogInController controlador = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+       // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
+        stage.setScene(scene);
+        
+        stage.show();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+        
+        }
+        catch(IOException ex){
+           
+        }
+    }
+
+    @FXML
+    private void goToWishList(ActionEvent event) {
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/WishList.fxml"));
+        Parent root = loader.load();
+        WishListController controlador = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+       // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
+        stage.setScene(scene);
+        
+        stage.show();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+        
+        }
+        catch(IOException ex){
+           
+        }
     }
     
 }

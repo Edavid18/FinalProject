@@ -86,7 +86,6 @@ public class LogInController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/Catalogue.fxml"));
         Parent root = loader.load();
         CatalogueController controlador = loader.getController();
-        
         Scene scene = new Scene(root);
         Stage stage = new Stage();
        // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa

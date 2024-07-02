@@ -14,13 +14,15 @@ public class node {
     public String idProd;
     public String idUser;
     public String date;
+    public String amount;
     public node next;
     
-    public node(String ids, String idp, String idu, String d){
+    public node(String ids, String idp, String idu, String d, String amount){
         idSale = ids;
         idProd = idp;
         idUser = idu;
         date = d;
+        this.amount = amount;
         next = null;
     }
     
@@ -29,6 +31,7 @@ public class node {
         idProd = "";
         idUser = "";
         date = "";
+        amount = "";
         next = null;
     }
     

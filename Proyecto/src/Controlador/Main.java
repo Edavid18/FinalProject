@@ -7,6 +7,7 @@ package Controlador;
 import Date.fecha;
 import ShoppingCart.ShoppingCart;
 import static VistaControlador.LogInController.list;
+import WishList.wishList;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -22,13 +23,17 @@ import javafx.scene.layout.Pane;
  */
 
 public class Main extends Application{
-
+    
+    public static ShoppingCart Shoplist = new ShoppingCart();
+    public static wishList wish = new wishList();
+    
     /**
      * @param args the command line arguments
      */
     public void start(Stage primaryStage) {
 
         try {
+            
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("/Vista/LogIn.fxml"));
             Pane ventana = (Pane) loader.load();

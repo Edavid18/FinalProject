@@ -4,6 +4,7 @@
  */
 package VistaControlador;
 
+import static Controlador.Main.Shoplist;
 import Products.Product;
 import ShoppingCart.ShoppingCart;
 import ShoppingCart.node;
@@ -36,51 +37,52 @@ public class ShoppingCartController implements Initializable {
     
     private ArrayList<AnchorPane> shoppingCartItems = new ArrayList<>();
     
-    
-
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        loadItems();
+    }
+    
+    private void loadItems() {
         try {
-            
-            ShoppingCart Shoplist = new ShoppingCart();
+            itemsPane.getChildren().clear();
+            //shoppingCartItems.clear();
             node b = Shoplist.getTopList();
-            
-            while(b!=null){
+
+            while (b != null) {
                 if (Shoplist.prodExists(b.idProd) != null) {
                     if (b.idUser.equals(list.userLoggedIn)) {
                         Product prod = Shoplist.prodExists(b.idProd);
-                        addItem(prod.name, prod.price, prod.description);
+                        addItem(prod.name, prod.price, b.amount, prod.image, b.idSale);
                     }
                 }
                 b = b.next;
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
     
-    private void addItem(String name, String price, String desc) throws IOException {
+    private void addItem(String name, String price, String desc, String route, String id) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/ShoppingCartItem.fxml"));
         AnchorPane shoppingCartItem = loader.load();
         
         ShoppingCartItemController controller = loader.getController();
-        
-        controller.changeLabels(name, price, desc);
+        controller.changeLabels(name, price, desc, route, id);
+        controller.setShoppingCartController(this);
 
+        /*if (itemsPane.getChildren().isEmpty()) {
+            itemsPane.getChildren().add(shoppingCartItem); // If empty, just add the item
+        }else {
+            itemsPane.getChildren().add(itemsPane.getChildren().size() - 1, shoppingCartItem); // Adds above the last item
+        }*/ 
         itemsPane.getChildren().add(shoppingCartItem);
-
-        shoppingCartItems.add(shoppingCartItem);
     }
-
-    public void removeItem(int index) {
-        if (index >= 0 && index < shoppingCartItems.size()) {
-            itemsPane.getChildren().remove(shoppingCartItems.get(index));
-            shoppingCartItems.remove(index);
-        }
+    
+    public void refreshItems() {
+        loadItems();
     }
 
     @FXML
@@ -101,16 +103,6 @@ public class ShoppingCartController implements Initializable {
         }
         catch(IOException ex){
            
-        }
-    }
-
-    @FXML
-    private void AddItemsToPanel(ActionEvent event) {
-        try{
-            addItem("Elias", "100", "This is the default shit");
-            
-        }catch(Exception e){
-            
         }
     }
     

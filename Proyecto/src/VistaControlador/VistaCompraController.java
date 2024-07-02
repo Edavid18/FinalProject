@@ -4,6 +4,11 @@
  */
 package VistaControlador;
 
+import static Controlador.Main.Shoplist;
+import static Controlador.Main.wish;
+import ShoppingCart.ShoppingCart;
+import static VistaControlador.LogInController.list;
+import WishList.wishList;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +21,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -46,8 +52,13 @@ public class VistaCompraController implements Initializable {
     public String id;
     @FXML
     private ImageView image;
+    @FXML
+    private ComboBox<String> amount;
     
-
+    
+    @FXML
+    private Button wishListButton;
+    
     /**
      * Initializes the controller class.
      */
@@ -55,7 +66,8 @@ public class VistaCompraController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
      
         // TODO
-        
+        amount.getItems().addAll("1", "2", "3", "4", "5");
+        amount.setValue("1");
         
       }  
     
@@ -64,6 +76,7 @@ public class VistaCompraController implements Initializable {
       Nameproduct.setText(name);
       
       price.setText(valor);
+      this.id=id;
       
       Image imagen = new Image(ruta);
       image.setImage(imagen);
@@ -76,26 +89,34 @@ public class VistaCompraController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/VistaCompra.fxml"));
         Parent root = loader.load();
         VistaCompraController controlador = loader.getController();
-        this.id=id;
-        
        
         controlador.VistaGen(name,precio,id,ruta);
-        
         
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.showAndWait();
         
-        
         }
         catch(IOException ex){
             System.out.println(ex);
         }
-    
-    
-    
 }
+
+    @FXML
+    private void addToCart(ActionEvent event) {
+        Shoplist.registerInFile(id, list.userLoggedIn, amount.getValue());
+    }
+
+    @FXML
+    private void addToWishList(ActionEvent event) {
+        wish.registerInFile(id, list.userLoggedIn, amount.getValue()); 
+    }
+
+    @FXML
+    private void buy(ActionEvent event) {
+        Shoplist.registerOneItemInFile(id, list.userLoggedIn, amount.getValue());
+    }
     
 
     
