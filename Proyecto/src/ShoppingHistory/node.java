@@ -16,6 +16,7 @@ public class node {
     public String date;
     public String amount;
     public node next;
+    public node before;
     
     public node(String ids, String idp, String idu, String d, String amount){
         idSale = ids;
@@ -24,6 +25,7 @@ public class node {
         date = d;
         this.amount = amount;
         next = null;
+        before = null;
     }
     
     public node(){
@@ -33,6 +35,7 @@ public class node {
         date = "";
         amount = "";
         next = null;
+        before = null;
     }
     
 }

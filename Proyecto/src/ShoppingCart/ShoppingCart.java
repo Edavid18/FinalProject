@@ -49,21 +49,33 @@ public class ShoppingCart {
         return top;
     }
     
+    public node getLast(){
+        node b = top;
+        while(b!=null){
+            if (b.after == null) {
+                return b;
+            }
+            b = b.after;
+        }
+        return null;
+    }
+    
+    
     public void print(){
         node b = top;
         while(b!=null){
             System.out.println(b.idSale);
-            b = b.next;
+            b = b.after;
         }
     }
     
     public node getBefore(node q){
         node b = top;
         while(b != null){
-            if (b.next == q) {
+            if (b.after == q) {
                 return b;
             }
-            b = b.next;
+            b = b.after;
         }
         return null;
     }
@@ -77,7 +89,7 @@ public class ShoppingCart {
                 if (p.idSale.equals(idSale)) {
                     return p;
                 }
-                p = p.next;
+                p = p.after;
             }
             return null;
         }
@@ -118,7 +130,8 @@ public class ShoppingCart {
             top=q;
             Message("Cab era null, ahora es lo que estaba de primero en el archivo");
         }else{
-            q.next = top;
+            q.after = top;
+            top.before = q;
             top = q;
         }
     }
@@ -134,7 +147,8 @@ public class ShoppingCart {
                     Message("Element registered. List was empty");
                     return true;
                 } else {
-                    q.next = top;
+                    q.after = top;
+                    top.before = q;
                     top = q;
                     return true;
                 }
@@ -157,7 +171,7 @@ public class ShoppingCart {
                         total = total + price;
                     }
                 }
-                b = b.next;
+                b = b.after;
             }
         return total;
     }
@@ -201,7 +215,7 @@ public class ShoppingCart {
                     printw.println(p.idProd);
                     printw.println(p.date);
                     printw.println(p.amount);
-                    p = p.next;
+                    p = p.after;
                 }
                 
                 print();
@@ -265,7 +279,7 @@ public class ShoppingCart {
                 printw.println(p.idProd);
                 printw.println(p.date);
                 printw.println(p.amount);
-                p = p.next;
+                p = p.after;
             }
             
 
@@ -291,7 +305,7 @@ public class ShoppingCart {
                 toDelete = b;
                 break;
             }
-            b = b.next;
+            b = b.after;
         }
         System.out.println("top1" + top);
        
@@ -299,20 +313,24 @@ public class ShoppingCart {
             node bef = getBefore(toDelete);
             
             if (toDelete == top) {
-                if (toDelete.next == null) {
+                if (toDelete.after == null) {
                     top = null;
                     System.out.println("top after deleted" + top);
                 }else{
-                    top = toDelete.next;
-                    toDelete.next = null;
+                    top = toDelete.after;
+                    toDelete.after = null;
+                    top.before = null;
                     toDelete = null;
                 }
-            }else if(toDelete.next == null){
-                bef.next = null;
+            }else if(toDelete.after == null){
+                toDelete.before.after = null;
+                toDelete.before = null;
                 toDelete = null;
             }else{
-                bef.next = toDelete.next;
-                toDelete.next = null;
+                toDelete.before.after = toDelete.after;
+                toDelete.after.before = toDelete.before;
+                toDelete.after = null;
+                toDelete.before = null;
                 toDelete = null;
             }
         }

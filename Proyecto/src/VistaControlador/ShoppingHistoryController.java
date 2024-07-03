@@ -47,7 +47,7 @@ public class ShoppingHistoryController implements Initializable {
                 if (history.prodExists(b.idProd) != null) {
                     if (b.idUser.equals(list.userLoggedIn)) {
                         Product prod = history.prodExists(b.idProd);
-                        addItem(prod.name, prod.price, b.amount, prod.image, b.idSale);
+                        addItem(prod.name, prod.price, b.amount, prod.image, b.idSale, b.date);
                     }
                 }
                 b = b.next;
@@ -57,19 +57,19 @@ public class ShoppingHistoryController implements Initializable {
         }
     }    
     
-    private void addItem(String name, String price, String desc, String route, String id) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/adminPageItems.fxml"));
-        AnchorPane shoppingCartItem = loader.load();
+    private void addItem(String name, String price, String desc, String route, String id, String date) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/ShoppingHistoryItem.fxml"));
+        AnchorPane ks = loader.load();
         
-        AdminPageItemsController controller = loader.getController();
-        controller.changeLabels(name, price, desc, route, id);
+        ShoppingHistoryItemController controller = loader.getController();
+        controller.changeLabels(name, price, desc, route, id, date);
 
         /*if (itemsPane.getChildren().isEmpty()) {
             itemsPane.getChildren().add(shoppingCartItem); // If empty, just add the item
         }else {
             itemsPane.getChildren().add(itemsPane.getChildren().size() - 1, shoppingCartItem); // Adds above the last item
         }*/ 
-        itemsPane.getChildren().add(shoppingCartItem);
+        itemsPane.getChildren().add(ks);
     }
 
     @FXML

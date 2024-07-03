@@ -72,7 +72,7 @@ public class CheckoutController implements Initializable {
                         
                     }
                 }
-                b = b.next;
+                b = b.after;
             }
             
             double subTotalAmount = Shoplist.getSubTotal();
@@ -133,19 +133,18 @@ public class CheckoutController implements Initializable {
 
     @FXML
     private void pay(ActionEvent event) {
-        node b = Shoplist.getTopList();
+        node b = Shoplist.getLast();
         while (b != null) {
             if (Shoplist.prodExists(b.idProd) != null) {
                 if (b.idUser.equals(list.userLoggedIn)) {
                     history.registerInFile(b.idSale, b.idProd, b.idUser, b.amount, b.date);
                     node p = b;
-                    b = b.next;
+                    b = b.before;
                     Shoplist.deleteProduct(p.idSale);
                 }
             }
         }
         refreshItems();
-        
         try{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/Catalogue.fxml"));
         Parent root = loader.load();

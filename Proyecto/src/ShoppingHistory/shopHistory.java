@@ -168,6 +168,7 @@ public class shopHistory {
                         }else{
                             return;
                         }
+                        
                     case 1:
                         sale.idUser = linea.trim();
                         i++;

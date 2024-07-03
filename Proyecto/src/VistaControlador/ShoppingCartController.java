@@ -61,7 +61,7 @@ public class ShoppingCartController implements Initializable {
                         addItem(prod.name, prod.price, b.amount, prod.image, b.idSale);
                     }
                 }
-                b = b.next;
+                b = b.after;
             }
         } catch (Exception e) {
             e.printStackTrace();
