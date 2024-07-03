@@ -457,6 +457,7 @@
                         <Button layoutX="1176.0" layoutY="70.0" mnemonicParsing="false" onAction="#goToShoppingCart" text="Shopping Cart" />
                         <Button layoutX="48.0" layoutY="70.0" mnemonicParsing="false" onAction="#goToLogIn" text="Button" />
                         <Button layoutX="1087.0" layoutY="71.0" mnemonicParsing="false" onAction="#goToWishList" text="Wish List" />
+                        <Button layoutX="1015.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToHistory" text="HIstory" />
                      </children>
                   </Pane>
                </children>

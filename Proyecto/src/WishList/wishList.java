@@ -7,6 +7,7 @@ package WishList;
 import Date.fecha;
 import Products.ListProd;
 import Products.Product;
+import static VistaControlador.LogInController.list;
 import VistaControlador.SignUpController;
 import java.io.BufferedReader;
 import java.io.File;
@@ -63,6 +64,17 @@ public class wishList {
             System.out.println(b);
             b = b.next;
         }
+    }
+    
+    public node searchWishAdded(String idProd, String idUser){
+        node b = top;
+        while(b!=null){
+            if (idProd.equals(b.idProd) && (idUser.equals(b.idUser))) {
+                return b;
+            }
+            b = b.next;
+        }
+        return null;
     }
     
     public node searchWish(String idwish){
@@ -153,22 +165,28 @@ public class wishList {
             file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/WishList/wishList.txt");
             printw = new PrintWriter(file);
             
-            boolean newNode = addNewNodeEnd(idProd, idUser, amount);
+            node s = searchWishAdded(idProd, idUser);
             
-            if (newNode) {
-                node p = top;
-
-                while(p!=null){
-                    printw.println(p.idWish);
-                    printw.println(p.idProd);
-                    printw.println(p.idUser);
-                    printw.println(p.amount);
-                    p = p.next;
-                }
+            
+            if (s == null) {
+                
+                boolean newNode = addNewNodeEnd(idProd, idUser, amount);
+                
                 
             }else{
                 Message("No new data saved.");
             }
+            
+            node p = top;
+
+            while(p!=null){
+                printw.println(p.idWish);
+                printw.println(p.idProd);
+                printw.println(p.idUser);
+                printw.println(p.amount);
+                p = p.next;
+            }
+            
         } catch (Exception e) {
             Message("Error1!");
         } finally {

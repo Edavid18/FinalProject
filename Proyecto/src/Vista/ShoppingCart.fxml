@@ -16,6 +16,7 @@
       <Pane layoutY="-2.0" prefHeight="53.0" prefWidth="607.0" style="-fx-background-color: red;">
          <children>
             <Button layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToCatalogue" text="Button" />
+            <Button layoutX="538.0" layoutY="15.0" mnemonicParsing="false" onAction="#goToCheckout" text="Button" />
          </children>
       </Pane>
    </children>

@@ -6,6 +6,7 @@ package Controlador;
 
 import Date.fecha;
 import ShoppingCart.ShoppingCart;
+import ShoppingHistory.shopHistory;
 import static VistaControlador.LogInController.list;
 import WishList.wishList;
 import java.io.IOException;
@@ -26,6 +27,7 @@ public class Main extends Application{
     
     public static ShoppingCart Shoplist = new ShoppingCart();
     public static wishList wish = new wishList();
+    public static shopHistory history = new shopHistory();
     
     /**
      * @param args the command line arguments
@@ -46,6 +48,8 @@ public class Main extends Application{
             
             fecha date = new fecha();
             date.changeMonth();
+            
+            
             
         } catch (IOException e) {
             System.out.println(e.getMessage());

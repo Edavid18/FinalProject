@@ -48,15 +48,15 @@ Mercury Avator 7.5
 3499.99
 /images/canas1/mercury.jpg
 10
-6001
+7001
 Stringer198
-45000
-/images/botes/Stringer-198-Metallic-blue.png
+45000.90
+/images/botes/Stinger-198-Metallic-Blue.png
 30
 6002
-Fishing Macihe
+Fishing machine
 35000
-/images/botes/fishing machine.png
+/images/botes/fishingmachine.png
 10
 6003
 The VW

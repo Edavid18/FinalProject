@@ -12,17 +12,18 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/WishListItemController.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Vista/ShoppingHistory.fxml</file>
             <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Vista/ShoppingCart.fxml</file>
-            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/CatalogueController.java</file>
-            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingCart/node.java</file>
-            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/WishList/node.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/ShoppingHistoryController.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Products/ListProd.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Products/Product.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingHistory/shopHistory.java</file>
             <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/ShoppingCartItemController.java</file>
-            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/VistaCompraController.java</file>
             <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/ShoppingCartController.java</file>
-            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingCart/shoppingList.txt</file>
-            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/WishList/wishList.txt</file>
-            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/WishList/wishList.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/LogInController.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Products/products.txt</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/AdminPageController.java</file>
+            <file>file:/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/VistaControlador/AdminPageItemsController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -43,6 +43,9 @@ public class ShoppingCartItemController implements Initializable {
     public String id;
     
     private ShoppingCartController shoppingCartController;
+    private CheckoutController checkout;
+    boolean shop = false;
+    boolean buy = false;
     
     /**
      * Initializes the controller class.
@@ -65,12 +68,25 @@ public class ShoppingCartItemController implements Initializable {
     
     public void setShoppingCartController(ShoppingCartController shoppingCartController) {  // Add this method
         this.shoppingCartController = shoppingCartController;
+        shop = true;
+        buy = false;
+        
+    }
+    
+    public void setCheckOutController(CheckoutController checkout){
+        this.checkout = checkout;
+        shop = false;
+        buy = true;
     }
 
     @FXML
     private void delete(ActionEvent event) {
         Shoplist.deleteProduct(id);
-        shoppingCartController.refreshItems();
+        if (shop) {
+            shoppingCartController.refreshItems();
+        }else if(buy){
+            checkout.refreshItems();
+        }
     }
     
 }

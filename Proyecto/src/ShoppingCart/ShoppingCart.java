@@ -4,9 +4,11 @@
  */
 package ShoppingCart;
 
+import static Controlador.Main.Shoplist;
 import Date.fecha;
 import Products.ListProd;
 import Products.Product;
+import static VistaControlador.LogInController.list;
 import VistaControlador.SignUpController;
 import java.io.BufferedReader;
 import java.io.File;
@@ -144,6 +146,42 @@ public class ShoppingCart {
         }
     }
     
+    public double getSubTotal(){
+        node b = top;
+        double total = 0;
+        while (b != null) {
+                if (prodExists(b.idProd) != null) {
+                    if (b.idUser.equals(list.userLoggedIn)) {
+                        Product prod = prodExists(b.idProd);
+                        double price = Double.parseDouble(prod.price);
+                        total = total + price;
+                    }
+                }
+                b = b.next;
+            }
+        return total;
+    }
+    
+    public double getTotal(String desc){
+        if (desc.equals("Ruben")) {
+            double subTot = getSubTotal();
+            double off = subTot * 0.4;
+            double tot = subTot-off;
+            
+            return tot;
+        }else{
+            return getSubTotal();
+        }
+    }
+    
+    public boolean addDesc(String desc){
+        if (getSubTotal() > getTotal(desc)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
     public void registerInFile(String idProd, String idUser, String amount) {
         FileWriter file = null;
         PrintWriter printw = null;
@@ -209,6 +247,8 @@ public class ShoppingCart {
             }
         }
     }
+    
+    
     
     public void overWriteFile(){
         FileWriter file = null;
