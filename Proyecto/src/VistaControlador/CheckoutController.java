@@ -141,10 +141,15 @@ public class CheckoutController implements Initializable {
                     node p = b;
                     b = b.before;
                     Shoplist.deleteProduct(p.idSale);
+                }else{
+                    b = b.before;
                 }
+            }else{
+                b = b.before;
             }
         }
         refreshItems();
+        
         try{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/Catalogue.fxml"));
         Parent root = loader.load();
