@@ -62,7 +62,7 @@ public class WishListController implements Initializable {
     
     public void refreshItems() {
         loadItems();
-    }
+     }
     
     private void addItem(String name, String price, String amount, String route, String id, String idp) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/WishListItem.fxml"));

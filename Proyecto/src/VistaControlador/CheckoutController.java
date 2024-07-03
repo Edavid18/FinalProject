@@ -45,6 +45,8 @@ public class CheckoutController implements Initializable {
     private String tot;
     @FXML
     private Button DiscountButton;
+    @FXML
+    private Button payButton;
 
     /**
      * Initializes the controller class.
@@ -53,6 +55,7 @@ public class CheckoutController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         loadItems();
+        payButton.setDisable(true);
     }    
     
     private void loadItems() {
@@ -125,6 +128,7 @@ public class CheckoutController implements Initializable {
         Shoplist.addDesc(discountCode.getText());
         double totalAmount = Shoplist.getTotal(discountCode.getText());
         total.setText(String.valueOf(totalAmount));
+        payButton.setDisable(false);
     }
 
     @FXML
@@ -134,12 +138,31 @@ public class CheckoutController implements Initializable {
             if (Shoplist.prodExists(b.idProd) != null) {
                 if (b.idUser.equals(list.userLoggedIn)) {
                     history.registerInFile(b.idSale, b.idProd, b.idUser, b.amount, b.date);
-                    Shoplist.deleteProduct(b.idSale);
+                    node p = b;
+                    b = b.next;
+                    Shoplist.deleteProduct(p.idSale);
                 }
             }
-            b = b.next;
         }
         refreshItems();
+        
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/Catalogue.fxml"));
+        Parent root = loader.load();
+        CatalogueController controlador = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+       // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
+        stage.setScene(scene);
+        
+        stage.show();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+        
+        }
+        catch(IOException ex){
+           
+        }
     }
     
 }

@@ -13,7 +13,10 @@
 
 <BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="978.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaControlador.VistaCompraController">
    <bottom>
-      <Pane prefHeight="54.0" prefWidth="978.0" style="-fx-background-color: rgba(61, 158, 83, 1);" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="54.0" prefWidth="978.0" style="-fx-background-color: rgba(61, 158, 83, 1);" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="aded" layoutX="383.0" layoutY="19.0" prefHeight="17.0" prefWidth="274.0" />
+         </children></Pane>
    </bottom>
    <top>
       <Pane prefHeight="54.0" prefWidth="922.0" style="-fx-background-color: rgba(242, 232, 207, 1);" BorderPane.alignment="CENTER">

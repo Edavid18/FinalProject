@@ -12,6 +12,8 @@ import WishList.wishList;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,6 +32,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.scene.image.ImageView;
+import javafx.util.Duration;
 
 /**
  * FXML Controller class
@@ -58,6 +61,8 @@ public class VistaCompraController implements Initializable {
     
     @FXML
     private Button wishListButton;
+    @FXML
+    private Label aded;
     
     /**
      * Initializes the controller class.
@@ -106,11 +111,23 @@ public class VistaCompraController implements Initializable {
     @FXML
     private void addToCart(ActionEvent event) {
         Shoplist.registerInFile(id, list.userLoggedIn, amount.getValue());
+        aded.setText("New Item Added to Cart");
+        Timeline time = new Timeline(new KeyFrame(Duration.seconds(1),ae-> aded.setText("")));
+        time.play();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Timeline cierre = new Timeline(new KeyFrame(Duration.seconds(1),ae->stage.close()));
+        cierre.play();
     }
 
     @FXML
     private void addToWishList(ActionEvent event) {
-        wish.registerInFile(id, list.userLoggedIn, amount.getValue()); 
+        wish.registerInFile(id, list.userLoggedIn, amount.getValue());
+        aded.setText("New Item Added to WishList");
+        Timeline time = new Timeline(new KeyFrame(Duration.seconds(1),ae-> aded.setText("")));
+        time.play();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Timeline cierre = new Timeline(new KeyFrame(Duration.seconds(1),ae->stage.close()));
+        cierre.play();
     }
 
     @FXML
