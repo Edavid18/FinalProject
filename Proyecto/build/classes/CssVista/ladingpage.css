@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#landing_main_image{
+    -fx-background-image: url("../images/wallpapers/landing-main.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center top;
+}
+
+#background-opaque{
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+}

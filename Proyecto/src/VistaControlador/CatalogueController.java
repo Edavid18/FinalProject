@@ -140,9 +140,9 @@ public class CatalogueController implements Initializable {
     @FXML
     private void goToLogIn(ActionEvent event) {
         try{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/LogIn.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/LandingPage.fxml"));
         Parent root = loader.load();
-        LogInController controlador = loader.getController();
+        LandingPageController controlador = loader.getController();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
        // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa

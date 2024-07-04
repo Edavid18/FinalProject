@@ -86,7 +86,6 @@ public class LogInController implements Initializable {
         }
     }
     
-    @FXML
     private void goToCatalogue(ActionEvent event){
         try{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/Catalogue.fxml"));
@@ -112,6 +111,27 @@ public class LogInController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/adminPage.fxml"));
         Parent root = loader.load();
         AdminPageController controlador = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+       // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
+        stage.setScene(scene);
+        
+        stage.show();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+        
+        }
+        catch(IOException ex){
+           
+        }
+    }
+
+    @FXML
+    private void goToLanding(ActionEvent event) {
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/LandingPage.fxml"));
+        Parent root = loader.load();
+        LandingPageController controlador = loader.getController();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
        // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
