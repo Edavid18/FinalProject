@@ -1,0 +1,85 @@
+1001
+Fishing Rod Pro
+489.99
+/images/canas1/shimano-ocea-plugger.jpg
+30
+1002
+Ugly Stick
+539.99
+/images/canas1/ugly-stik-gx2.jpg
+10
+1003
+Ocea Plugger
+719.99
+/images/canas1/oceaplugger.png
+30
+1004
+Ugly Freaky Stick
+69.99
+/images/canas1/fiberglass.png
+10
+2001
+Deviaton 6 Boot
+134.99
+/images/miselanea/boots.png
+30
+2002
+Xtratuf
+139.99
+/images/miselanea/ADSM100_LARGE.jpg
+10
+3001
+YETY Cooler
+299.99
+/images/miselanea/yeti-tundra-45-cooler-1.png
+30
+3002
+Cooleman 316
+49.99
+/images/miselanea/coleman-316-series-.jpg
+10
+4001
+American kit
+49.99
+/images/miselanea/kit .png
+30
+5001
+Mercury Avator 7.5
+3499.99
+/images/canas1/mercury.jpg
+10
+7001
+Stringer198
+45000.90
+/images/botes/Stinger-198-Metallic-Blue.png
+30
+6002
+Fishing machine
+35000
+/images/botes/fishingmachine.png
+10
+6003
+The VW
+60000
+/images/botes/lb-wv1670.png
+30
+6004
+LB Legacy
+22325
+/images/botes/lb-legacy.png
+10
+6005
+Roughneck 2070
+100
+/images/botes/lb-roughneck-2070.png
+30
+6006
+Fish and Sky
+50000
+/images/botes/lb-fs1900.png
+10
+6007
+RS 270
+539.99
+/images/botes/lb-rs27ew.png
+30

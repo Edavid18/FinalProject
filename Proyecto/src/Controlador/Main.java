@@ -4,8 +4,19 @@
  */
 package Controlador;
 
+import Date.fecha;
+import ShoppingCart.ShoppingCart;
+import ShoppingHistory.shopHistory;
+import static VistaControlador.LogInController.list;
+import WishList.wishList;
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.stage.Stage;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 
 /**
  *
@@ -13,17 +24,39 @@ import javafx.stage.Stage;
  */
 
 public class Main extends Application{
-
+    
+    public static ShoppingCart Shoplist = new ShoppingCart();
+    public static wishList wish = new wishList();
+    public static shopHistory history = new shopHistory();
+    
     /**
      * @param args the command line arguments
      */
+    public void start(Stage primaryStage) {
+
+        try {
+            
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("/Vista/LogIn.fxml"));
+            Pane ventana = (Pane) loader.load();
+            
+            
+            // Show the scene containing the root layout.
+            Scene scene = new Scene(ventana);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            
+            fecha date = new fecha();
+            date.changeMonth();
+            
+            
+            
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
-        // TODO code application logic here
-        Application.launch();
+        launch(args);
     }
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-    primaryStage.show();
-    }
-    
 }

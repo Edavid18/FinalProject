@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="602.0" prefWidth="975.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaControlador.ShoppingHistoryController">
+   <children>
+      <Pane layoutX="31.0" layoutY="77.0" prefHeight="55.0" prefWidth="909.0" style="-fx-background-color: F2E8CF; -fx-border-radius: 3px; -fx-background-radius: 3px;">
+         <children>
+            <Label layoutX="56.0" layoutY="19.0" prefHeight="17.0" prefWidth="54.0" text="Product">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="265.0" layoutY="19.0" prefHeight="17.0" prefWidth="54.0" text="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="444.0" layoutY="19.0" prefHeight="21.0" prefWidth="78.0" text="Price">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="819.0" layoutY="17.0" prefHeight="21.0" prefWidth="86.0" text="Date">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="616.0" layoutY="18.0" prefHeight="21.0" prefWidth="78.0" text="Ammount">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutX="31.0" layoutY="130.0" prefHeight="426.0" prefWidth="918.0" style="-fx-background-color: F7F7F7;" vbarPolicy="ALWAYS">
+         <content>
+            <VBox fx:id="itemsPane" prefHeight="425.0" prefWidth="960.0" spacing="10.0" style="-fx-background-color: F7F7F7;" />
+         </content>
+      </ScrollPane>
+      <Button layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#goBackToCatalogue" prefHeight="43.0" prefWidth="78.0" style="-fx-background-color: transparent; -fx-border-color: trasnparent;" text="Back" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="460.0" layoutY="16.0" prefHeight="32.0" prefWidth="86.0" text="History">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="82.0" layoutX="901.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LOGO%202_1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

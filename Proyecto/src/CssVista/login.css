@@ -1,0 +1,70 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#label2{
+    -fx-font-weight: bold;
+}
+
+
+
+#Texto{
+    -fx-font-family:"Inter";
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+
+   
+}
+
+
+#panel{
+    -fx-background-color: white;
+    -fx-background-radius: 4px;  
+}
+
+#Log{
+    -fx-background-color: black;
+    -fx-font-family: "Inter";     
+    -fx-text-fill: white; 
+    -fx-font-weight: bold;
+    
+    -fx-background-radius: 4px;
+    
+}
+
+#label1{
+    -fx-text-fill: gray;
+}
+
+#back{
+    -fx-background-color: transparent;
+    -fx-font-family: "JetBrains Mono";     
+    -fx-text-fill: white; 
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-underline: true;
+    -fx-font-size:20px;
+}
+
+#SignUp{
+    -fx-background-color: transparent;
+    -fx-font-family: "Inter";     
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+}
+
+#Data{
+     -fx-border-width:0.1px;
+     -fx-border-color:grey; 
+      -fx-border-radius: 4px;
+    -fx-background-radius:4px;
+    -fx-font-family: "Inter"; 
+    
+}
+
+

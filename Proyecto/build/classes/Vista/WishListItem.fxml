@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="107.0" prefWidth="538.0" style="-fx-background-radius: 3px; -fx-border-radius: 3px;" styleClass="product_element" stylesheets="@../CssVista/catalogue.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaControlador.WishListItemController">
+   <children>
+      <Pane prefHeight="155.0" prefWidth="975.0" styleClass="product_element" stylesheets="@../CssVista/catalogue.css">
+         <children>
+            <Label fx:id="ProdName" layoutX="249.0" layoutY="69.0" text="Product name" />
+            <Label fx:id="price" layoutX="416.0" layoutY="69.0" text="Price" />
+            <Label fx:id="desc" layoutX="556.0" layoutY="70.0" text="Ammount" />
+            <Button layoutX="667.0" layoutY="66.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Add To Cart" />
+            <ImageView fx:id="image" fitHeight="134.0" fitWidth="167.0" layoutX="32.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LOGO%202.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="825.0" layoutY="66.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Delete" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

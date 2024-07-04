@@ -1,0 +1,37 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#main_image{
+    -fx-background-image:url("../images/wallpapers/catalogue-main.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: stretch; 
+    -fx-background-position: center center;
+}
+
+.product_element{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 9, 0, -2, 3);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.info_labels{
+    -fx-font-weight:bold;
+    -fx-font-size: 30px;
+}
+
+.info_labels:hover{
+   -fx-text-decoration: underline;
+   -fx-background-color: black;
+   -fx-text-fill:white;
+}
+
+#fishing_rods_container{
+    -fx-display: flex;
+    -fx-justify-content:space-between;
+}
