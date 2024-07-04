@@ -3,35 +3,113 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="565.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaControlador.CheckoutController">
+<AnchorPane id="AnchorPane" prefHeight="622.0" prefWidth="1291.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaControlador.CheckoutController">
    <children>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="50.0" prefHeight="284.0" prefWidth="737.0" vbarPolicy="ALWAYS">
-         <content>
-            <VBox fx:id="itemsPane" prefHeight="251.0" prefWidth="721.0" spacing="10.0" />
-         </content>
-      </ScrollPane>
-      <Pane layoutY="-2.0" prefHeight="53.0" prefWidth="738.0" style="-fx-background-color: red;">
+      <Pane layoutX="449.0" prefHeight="622.0" prefWidth="842.0" style="-fx-background-color: F2E8CF; -fx-border-width: 2px;">
          <children>
-            <Button layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToCatalogue" text="Button" />
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="406.0" prefWidth="825.0" style="-fx-background-color: white;" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox fx:id="itemsPane" prefHeight="453.0" prefWidth="810.0" spacing="10.0" style="-fx-background-color: white;" />
+               </content>
+            </ScrollPane>
+            <TextField fx:id="discountCode" layoutX="35.0" layoutY="439.0" prefHeight="32.0" prefWidth="617.0" promptText="Discount Code" />
+            <Separator layoutX="21.0" layoutY="424.0" prefHeight="0.0" prefWidth="796.0" style="-fx-background-color: gray;" />
+            <Button fx:id="DiscountButton" layoutX="676.0" layoutY="443.0" mnemonicParsing="false" onAction="#addDiscount" prefHeight="25.0" prefWidth="140.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Submit" />
+            <Label layoutX="44.0" layoutY="503.0" text="Subtotal">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="588.0" text="Total" />
+            <Separator layoutX="14.0" layoutY="568.0" prefHeight="0.0" prefWidth="796.0" style="-fx-background-color: gray;" />
+            <Label fx:id="subTotal" layoutX="196.0" layoutY="504.0" text="Label">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="total" layoutX="212.0" layoutY="588.0" text="Label" />
+            <Label layoutX="43.0" layoutY="543.0" text="Shipping" />
+            <Label layoutX="173.0" layoutY="543.0" text="(Free shipping)" />
          </children>
       </Pane>
-      <Pane layoutX="-1.0" layoutY="333.0" prefHeight="231.0" prefWidth="741.0">
-         <children>
-            <TextField fx:id="discountCode" layoutX="97.0" layoutY="42.0" promptText="Discount Code" />
-            <Button fx:id="DiscountButton" layoutX="287.0" layoutY="43.0" mnemonicParsing="false" onAction="#addDiscount" text="Get total" />
-            <Label fx:id="subTotal" layoutX="187.0" layoutY="95.0" text="Label" />
-            <Label layoutX="117.0" layoutY="120.0" text="Shipping" />
-            <Label fx:id="total" layoutX="189.0" layoutY="164.0" text="Label" />
-            <Label layoutX="195.0" layoutY="122.0" text="(Free shipping)" />
-            <Label layoutX="121.0" layoutY="96.0" text="Subtotal" />
-            <Label layoutX="129.0" layoutY="164.0" text="Total" />
-            <Button fx:id="payButton" layoutX="437.0" layoutY="118.0" mnemonicParsing="false" onAction="#pay" text="Pay" />
-         </children>
-      </Pane>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToCatalogue" style="-fx-background-color: transparent;" text="Back" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="payButton" layoutX="19.0" layoutY="484.0" mnemonicParsing="false" onAction="#pay" prefHeight="26.0" prefWidth="402.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Pay" />
+      <ImageView fitHeight="89.0" fitWidth="134.0" layoutX="134.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Captura%20de%20pantalla%202024-07-03%20193316.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="130.0" prefHeight="20.0" prefWidth="47.0" text="Adress">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="53.0" layoutY="159.0" prefHeight="26.0" prefWidth="172.0" style="-fx-border-radius: 3px; -fx-background-radius: 3px;" />
+      <TextField layoutX="259.0" layoutY="159.0" prefHeight="26.0" prefWidth="172.0" style="-fx-border-radius: 3px; -fx-background-radius: 3px;" />
+      <Label layoutX="55.0" layoutY="94.0" text="Detalle Personales">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="48.0" layoutY="224.0" prefHeight="26.0" prefWidth="172.0" style="-fx-border-radius: 3px; -fx-background-radius: 3px;" />
+      <TextField layoutX="259.0" layoutY="224.0" prefHeight="26.0" prefWidth="172.0" style="-fx-border-radius: 3px; -fx-background-radius: 3px;" />
+      <Label layoutX="52.0" layoutY="264.0" prefHeight="26.0" prefWidth="186.0" text="Detalle de la Tarjeta">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="45.0" layoutY="321.0" prefHeight="26.0" prefWidth="382.0" style="-fx-border-radius: 3px; -fx-background-radius: 3px;" />
+      <TextField layoutX="45.0" layoutY="377.0" prefHeight="26.0" prefWidth="382.0" style="-fx-border-radius: 3px; -fx-background-radius: 3px;" />
+      <Label layoutX="259.0" layoutY="130.0" prefHeight="20.0" prefWidth="47.0" text="City">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="196.0" prefHeight="20.0" prefWidth="79.0" text="Postal Code">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="196.0" prefHeight="20.0" prefWidth="47.0" text="Estado">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="295.0" prefHeight="20.0" prefWidth="106.0" text="Nombre Titular">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="357.0" prefHeight="20.0" prefWidth="106.0" text="Numero Tarjeta">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="42.0" layoutY="442.0" prefHeight="26.0" prefWidth="172.0" style="-fx-border-radius: 3px; -fx-background-radius: 3px;" />
+      <Label layoutX="45.0" layoutY="411.0" prefHeight="20.0" prefWidth="106.0" text="Vencimiento">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="236.0" layoutY="442.0" prefHeight="26.0" prefWidth="180.0" style="-fx-border-radius: 3px; -fx-background-radius: 3px;" />
+      <Label layoutX="245.0" layoutY="411.0" prefHeight="20.0" prefWidth="106.0" text="CVC">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="437.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="622.0" prefWidth="0.0" />
    </children>
 </AnchorPane>

@@ -1,13 +1,22 @@
 package VistaAdmin;
 
+import VistaControlador.AdminPageController;
+import VistaControlador.CatalogueController;
+import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
+import javafx.stage.Stage;
 
 public class EstadisticasController implements Initializable {
 
@@ -23,7 +32,7 @@ public class EstadisticasController implements Initializable {
         
         xAxis.setTickLabelRotation(360);
         linea.setTitle("Sales in the Year");
-        series.setName("");
+        series.setName("All Sales");
         
         
 
@@ -43,5 +52,29 @@ public class EstadisticasController implements Initializable {
 
         // Añadir la serie al LineChart
         linea.getData().add(series);
+    }
+
+    @FXML
+    private void close(ActionEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
+    private void allproducts(ActionEvent event) {
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/adminPage.fxml"));
+        Parent root = loader.load();
+        AdminPageController controlador = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+       // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
+        stage.setScene(scene);
+        
+        stage.show();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+        
+        }catch(IOException ex){
+        }
     }
 }

@@ -48,7 +48,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Button id="back" layoutX="28.0" layoutY="529.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="79.0" stylesheets="@../CssVista/login.css" text="Back">
+      <Button id="back" layoutX="28.0" layoutY="529.0" mnemonicParsing="false" onAction="#close" prefHeight="46.0" prefWidth="79.0" stylesheets="@../CssVista/login.css" text="Back">
          <font>
             <Font name="Curlz MT" size="12.0" />
          </font>

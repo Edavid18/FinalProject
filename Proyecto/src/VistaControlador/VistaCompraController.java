@@ -32,6 +32,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 /**
@@ -45,7 +46,6 @@ public class VistaCompraController implements Initializable {
     private BorderPane bp;
     @FXML
     private Pane panelinfo;
-    @FXML
     private Label Nameproduct;
     @FXML
     private Label price;
@@ -63,6 +63,8 @@ public class VistaCompraController implements Initializable {
     private Button wishListButton;
     @FXML
     private Label aded;
+    @FXML
+    private Text productname;
     
     /**
      * Initializes the controller class.
@@ -78,7 +80,7 @@ public class VistaCompraController implements Initializable {
     
     public void VistaGen(String name, double precio,String id, String ruta){
       String valor = String.valueOf(precio);
-      Nameproduct.setText(name);
+      productname.setText(name);
       
       price.setText(valor);
       this.id=id;

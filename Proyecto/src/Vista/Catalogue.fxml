@@ -16,17 +16,28 @@
         <URL value="@/CssVista/catalogue.css" />
     </stylesheets>
    <children>
-      <ScrollPane hbarPolicy="ALWAYS" layoutY="14.0" prefHeight="857.0" prefWidth="1316.0">
+      <ScrollPane hbarPolicy="ALWAYS" layoutY="14.0" prefHeight="1751.0" prefWidth="1316.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2123.0" prefWidth="1288.0">
                <children>
                   <Pane layoutY="5.0" prefHeight="2114.0" prefWidth="1286.0">
                      <children>
-                        <Pane prefHeight="59.0" prefWidth="1285.0" style="-fx-background-color: f2e8cf;" styleClass="nav-var">
+                        <Pane layoutX="1.0" prefHeight="59.0" prefWidth="1285.0" style="-fx-background-color: f2e8cf;" styleClass="nav-var">
                            <children>
                               <ImageView fitHeight="36.0" fitWidth="65.0" layoutX="19.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/LOGO%202.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="1219.0" layoutY="15.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-text-fill: white; -fx-background-color: black;" text="Log Out" />
+                              <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="1164.0" layoutY="11.0" onMouseClicked="#carro" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icon/carrito-de-compras.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="1120.0" layoutY="11.0" onMouseClicked="#deseo" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icon/me-gusta.png" />
                                  </image>
                               </ImageView>
                            </children>
@@ -261,7 +272,7 @@
                         </Pane>
                         <Pane id="fishing_rods_container" layoutX="70.0" layoutY="1251.0" prefHeight="577.0" prefWidth="1183.0" stylesheets="@../CssVista/catalogue.css">
                            <children>
-                              <Label layoutX="14.0" styleClass="info_labels" stylesheets="@../CssVista/catalogue.css" text="Boats" />
+                              <Label layoutX="14.0" onMouseClicked="#Goboats" styleClass="info_labels" stylesheets="@../CssVista/catalogue.css" text="Boats" />
                               <Pane layoutX="473.0" layoutY="48.0" onMouseClicked="#stringer" prefHeight="241.0" prefWidth="218.0" styleClass="product_element" stylesheets="@../CssVista/catalogue.css">
                                  <children>
                                     <ImageView fitHeight="117.0" fitWidth="200.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -286,7 +297,7 @@
                                  <children>
                                     <ImageView fitHeight="117.0" fitWidth="200.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../images/botes/fishing%20machine.png" />
+                                          <Image url="@../images/botes/fishingmachine.png" />
                                        </image>
                                     </ImageView>
                                     <Label layoutX="13.0" layoutY="162.0" text="\$ 35000 USD">
@@ -454,10 +465,7 @@
                               </ImageView>
                            </children>
                         </Pane>
-                        <Button layoutX="1176.0" layoutY="70.0" mnemonicParsing="false" onAction="#goToShoppingCart" text="Shopping Cart" />
-                        <Button layoutX="48.0" layoutY="70.0" mnemonicParsing="false" onAction="#goToLogIn" text="Button" />
-                        <Button layoutX="1087.0" layoutY="71.0" mnemonicParsing="false" onAction="#goToWishList" text="Wish List" />
-                        <Button layoutX="1015.0" layoutY="72.0" mnemonicParsing="false" onAction="#goToHistory" text="HIstory" />
+                        <Button layoutX="21.0" layoutY="71.0" mnemonicParsing="false" onAction="#goToHistory" style="-fx-text-fill: white; -fx-background-color: black;" text="HIstory" />
                      </children>
                   </Pane>
                </children>

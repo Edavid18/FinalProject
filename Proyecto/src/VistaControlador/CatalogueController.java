@@ -94,12 +94,12 @@ public class CatalogueController implements Initializable {
 
     @FXML
     private void stringer(MouseEvent event) {
-        obj.cambiar("Stringer198",45000,"6001","/images/botes/Stringer-198-Metallic-blue.png");
+        obj.cambiar("Stringer198",45000,"6001","/images/botes/Stinger-198-Metallic-Blue.png");
     }
 
     @FXML
     private void machine(MouseEvent event) {
-        obj.cambiar("Fishing Macihe",35000,"6002","/images/botes/fishing machine.png");
+        obj.cambiar("Fishing Macihe",35000,"6002","/images/botes/fishingmachine.png");
     }
 
     @FXML
@@ -114,7 +114,7 @@ public class CatalogueController implements Initializable {
 
     @FXML
     private void Rough(MouseEvent event) {
-        obj.cambiar(">Roughneck 2070",100,"6005","/images/botes/lb-roughneck-2070.png");
+        obj.cambiar("Roughneck 2070",27000,"6005","/images/botes/lb-roughneck-2070.png");
     }
 
     @FXML
@@ -124,33 +124,17 @@ public class CatalogueController implements Initializable {
 
     @FXML
     private void rs270(MouseEvent event) {
-        obj.cambiar("RS 270",539.99,"6007","/images/botes/lb-rs27ew.png");
+        obj.cambiar("RS 270",74600,"6007","/images/botes/lb-rs27ew.png");
     }
 
     @FXML
     private void g2(MouseEvent event) {
-        obj.cambiar("Sexo",100,"1002","/images/canas1/ugly-stik-gx2.jpg");
+        obj.cambiar("Ugly Stick Gx2",539.99,"1002","/images/canas1/ugly-stik-gx2.jpg");
     }
 
     @FXML
     private void goToShoppingCart(ActionEvent event) {
-        try{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/ShoppingCart.fxml"));
-        Parent root = loader.load();
-        ShoppingCartController controlador = loader.getController();
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-       // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
-        stage.setScene(scene);
         
-        stage.show();
-        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        currentStage.close();
-        
-        }
-        catch(IOException ex){
-           
-        }
     }
 
     @FXML
@@ -176,7 +160,54 @@ public class CatalogueController implements Initializable {
 
     @FXML
     private void goToWishList(ActionEvent event) {
+       
+    }
+
+    @FXML
+    private void goToHistory(ActionEvent event) {
         try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/ShoppingHistory.fxml"));
+        Parent root = loader.load();
+        ShoppingHistoryController controlador = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+       // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
+        stage.setScene(scene);
+        
+        stage.show();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+        
+        }
+        catch(IOException ex){
+           
+        }
+    }
+
+    @FXML
+    private void carro(MouseEvent event) {
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/ShoppingCart.fxml"));
+        Parent root = loader.load();
+        ShoppingCartController controlador = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+       // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
+        stage.setScene(scene);
+        
+        stage.show();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
+        
+        }
+        catch(IOException ex){
+           
+        }
+    }
+
+    @FXML
+    private void deseo(MouseEvent event) {
+         try{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/WishList.fxml"));
         Parent root = loader.load();
         WishListController controlador = loader.getController();
@@ -196,11 +227,11 @@ public class CatalogueController implements Initializable {
     }
 
     @FXML
-    private void goToHistory(ActionEvent event) {
+    private void Goboats(MouseEvent event) {
         try{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/ShoppingHistory.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/boats.fxml"));
         Parent root = loader.load();
-        ShoppingHistoryController controlador = loader.getController();
+        BoatsController controlador = loader.getController();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
        // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa

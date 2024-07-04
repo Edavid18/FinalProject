@@ -6,6 +6,7 @@ package VistaControlador;
 
 import Authentication.Authentication;
 import ShoppingCart.ShoppingCart;
+import VistaAdmin.EstadisticasController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -86,7 +87,6 @@ public class LogInController implements Initializable {
         }
     }
     
-    @FXML
     private void goToCatalogue(ActionEvent event){
         try{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/Catalogue.fxml"));
@@ -109,9 +109,9 @@ public class LogInController implements Initializable {
     
     private void goToAdminPage(ActionEvent event){
         try{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/adminPage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/VistaAdmin/Estadisticas.fxml"));
         Parent root = loader.load();
-        AdminPageController controlador = loader.getController();
+        EstadisticasController controlador = loader.getController();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
        // stage.initModality(Modality.APPLICATION_MODAL); sirve para no salir hasta terminar el programa
@@ -125,6 +125,11 @@ public class LogInController implements Initializable {
         catch(IOException ex){
            
         }
+    }
+
+    @FXML
+    private void close(ActionEvent event) {
+        System.exit(0);
     }
     
 }

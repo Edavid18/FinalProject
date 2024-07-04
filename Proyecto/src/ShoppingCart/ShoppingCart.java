@@ -201,7 +201,7 @@ public class ShoppingCart {
         PrintWriter printw = null;
         
         try {
-            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingCart/shoppingList.txt");
+            file = new FileWriter("/D:/FinalProject/Proyecto/src/ShoppingCart/shoppingList.txt");
             printw = new PrintWriter(file);
             
             boolean newNode = addNewNodeEnd(idProd, idUser, amount);
@@ -241,7 +241,7 @@ public class ShoppingCart {
         PrintWriter printw = null;
         
         try {
-            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingCart/buyItem.txt");
+            file = new FileWriter("/D:/FinalProject/Proyecto/src/ShoppingCart/buyItem.txt");
             printw = new PrintWriter(file);
             
             printw.println(idUser);
@@ -269,7 +269,7 @@ public class ShoppingCart {
         PrintWriter printw = null;
         
         try {
-            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingCart/shoppingList.txt");
+            file = new FileWriter("/D:/FinalProject/Proyecto/src/ShoppingCart/shoppingList.txt");
             printw = new PrintWriter(file);
             
             node p = top;
@@ -345,7 +345,7 @@ public class ShoppingCart {
         BufferedReader br = null;
 
         try {
-            archivo = new File("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingCart/shoppingList.txt");
+            archivo = new File("/D:/FinalProject/Proyecto/src/ShoppingCart/shoppingList.txt");
             fr = new FileReader(archivo);
             br = new BufferedReader(fr); //makes fr readable, it sort of translates it.
             
@@ -412,7 +412,7 @@ public class ShoppingCart {
         FileWriter file = null;
         PrintWriter printw = null;
         try {
-            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingCart/idSale.txt");
+            file = new FileWriter("/D:/FinalProject/Proyecto/src/ShoppingCart/idSale.txt");
             printw = new PrintWriter(file);
             
             int inIdSale = Integer.parseInt(idSale);
@@ -439,7 +439,7 @@ public class ShoppingCart {
         FileReader fr = null;
         BufferedReader br = null;
         try {
-            archivo = new File("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingCart/idSale.txt");
+            archivo = new File("/D:/FinalProject/Proyecto/src/ShoppingCart/idSale.txt");
             fr = new FileReader(archivo);
             br = new BufferedReader(fr); //makes fr readable, it sort of translates it.
             

@@ -162,7 +162,7 @@ public class wishList {
         PrintWriter printw = null;
         
         try {
-            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/WishList/wishList.txt");
+            file = new FileWriter("/D:/FinalProject/Proyecto/src/WishList/wishList.txt");
             printw = new PrintWriter(file);
             
             node s = searchWishAdded(idProd, idUser);
@@ -243,7 +243,7 @@ public class wishList {
         PrintWriter printw = null;
         
         try {
-            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/WishList/wishList.txt");
+            file = new FileWriter("/D:/FinalProject/Proyecto/src/WishList/wishList.txt");
             printw = new PrintWriter(file);
             
             node p = top;
@@ -276,7 +276,7 @@ public class wishList {
         BufferedReader br = null;
 
         try {
-            archivo = new File("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/WishList/wishList.txt");
+            archivo = new File("/D:/FinalProject/Proyecto/src/WishList/wishList.txt");
             fr = new FileReader(archivo);
             br = new BufferedReader(fr); //makes fr readable, it sort of translates it.
             
@@ -333,7 +333,7 @@ public class wishList {
         FileWriter file = null;
         PrintWriter printw = null;
         try {
-            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/WishList/idWish.txt");
+            file = new FileWriter("/D:/FinalProject/Proyecto/src/WishList/idWish.txt");
             printw = new PrintWriter(file);
             
             int inIdWish = Integer.parseInt(idWish);
@@ -360,7 +360,7 @@ public class wishList {
         FileReader fr = null;
         BufferedReader br = null;
         try {
-            archivo = new File("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/WishList/idWish.txt");
+            archivo = new File("/D:/FinalProject/Proyecto/src/WishList/idWish.txt");
             fr = new FileReader(archivo);
             br = new BufferedReader(fr); //makes fr readable, it sort of translates it.
             

@@ -114,7 +114,7 @@ public class shopHistory {
         PrintWriter printw = null;
         
         try {
-            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingHistory/shopHistory.txt");
+            file = new FileWriter("/D:/FinalProject/Proyecto/src/ShoppingHistory/shopHistory.txt");
             printw = new PrintWriter(file);
             
             boolean newNode = addNewNodeEnd(ids, idProd, idUser, amount, date);
@@ -150,7 +150,7 @@ public class shopHistory {
         BufferedReader br = null;
 
         try {
-            archivo = new File("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingHistory/shopHistory.txt");
+            archivo = new File("/D:/FinalProject/Proyecto/src/ShoppingHistory/shopHistory.txt");
             fr = new FileReader(archivo);
             br = new BufferedReader(fr); //makes fr readable, it sort of translates it.
             
