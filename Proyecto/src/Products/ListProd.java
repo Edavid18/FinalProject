@@ -47,7 +47,7 @@ public class ListProd {
         BufferedReader br = null;
 
         try {
-            archivo = new File("/D:/FinalProject/Proyecto/src/Products/products.txt");
+            archivo = new File("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Products/products.txt");
             fr = new FileReader(archivo);
             br = new BufferedReader(fr); //makes fr readable, it sort of translates it.
             

@@ -33,7 +33,7 @@ public class fecha {
         FileWriter file = null;
         PrintWriter printw = null;
         try {
-            file = new FileWriter("/D:/FinalProject/Proyecto/src/Date/date.txt");
+            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Date/date.txt");
             printw = new PrintWriter(file);
             
             String newDate;
@@ -67,7 +67,7 @@ public class fecha {
         BufferedReader br = null;
 
         try {
-            archivo = new File("/D:/FinalProject/Proyecto/src/Date/date.txt");
+            archivo = new File("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Date/date.txt");
             fr = new FileReader(archivo);
             br = new BufferedReader(fr); //makes fr readable, it sort of translates it.
             

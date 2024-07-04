@@ -111,7 +111,7 @@ public class Authentication {
         FileWriter file = null;
         PrintWriter printw = null;
         try {
-            file = new FileWriter("/D:/FinalProject/Proyecto/src/Authentication/users.txt");
+            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Authentication/users.txt");
             printw = new PrintWriter(file);
             
             boolean newNode = addNewNodeEnd(username, password, phone, name, lastName);
@@ -162,7 +162,7 @@ public class Authentication {
         FileWriter file = null;
         PrintWriter printw = null;
         try {
-            file = new FileWriter("/D:/FinalProject/Proyecto/src/Authentication/users.txt");
+            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Authentication/users.txt");
             printw = new PrintWriter(file);
             
             
@@ -226,7 +226,7 @@ public class Authentication {
         BufferedReader br = null;
 
         try {
-            archivo = new File("/D:/FinalProject/Proyecto/src/Authentication/users.txt");
+            archivo = new File("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/Authentication/users.txt");
             fr = new FileReader(archivo);
             br = new BufferedReader(fr); //makes fr readable, it sort of translates it.
             

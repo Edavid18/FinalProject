@@ -11,12 +11,12 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="823.0" prefWidth="1195.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaControlador.CatalogueController">
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="865.0" prefWidth="1316.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaControlador.CatalogueController">
     <stylesheets>
         <URL value="@/CssVista/catalogue.css" />
     </stylesheets>
    <children>
-      <ScrollPane hbarPolicy="ALWAYS" layoutY="14.0" prefHeight="1751.0" prefWidth="1316.0">
+      <ScrollPane hbarPolicy="ALWAYS" layoutY="14.0" prefHeight="857.0" prefWidth="1316.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2123.0" prefWidth="1288.0">
                <children>

@@ -114,7 +114,7 @@ public class shopHistory {
         PrintWriter printw = null;
         
         try {
-            file = new FileWriter("/D:/FinalProject/Proyecto/src/ShoppingHistory/shopHistory.txt");
+            file = new FileWriter("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingHistory/shopHistory.txt");
             printw = new PrintWriter(file);
             
             boolean newNode = addNewNodeEnd(ids, idProd, idUser, amount, date);
@@ -144,13 +144,99 @@ public class shopHistory {
         }
     }
     
+    public ArrayList<Integer> getAllSales(){
+        ArrayList<Integer> salesInMonths = new ArrayList<Integer>();
+        node b = top;
+        int jan = 0, feb = 0, mar = 0, apr = 0, may = 0, jun = 0, jul = 0, ago = 0, sept = 0, oct = 0, nov = 0, dic = 0;
+        while(b != null){
+            switch(b.date){
+                case "1": 
+                    jan++;
+                    b = b.next;
+                    break;
+                    
+                case "2": 
+                    feb++;
+                    b = b.next;
+                    break;
+                    
+                case "3": 
+                    mar++;
+                    b = b.next;
+                    break;
+                    
+                case "4": 
+                    apr++;
+                    b = b.next;
+                    break;
+                    
+                case "5": 
+                    may++;
+                    b = b.next;
+                    break;
+                    
+                case "6": 
+                    jun++;
+                    b = b.next;
+                    break;
+            
+                case "7": 
+                    jul++;
+                    b = b.next;
+                    break;
+                    
+                case "8": 
+                    ago++;
+                    b = b.next;
+                    break;
+                
+                case "9": 
+                    sept++;
+                    b = b.next;
+                    break;
+                
+                case "10": 
+                    oct++;
+                    b = b.next;
+                    break;
+                    
+                case "11": 
+                    nov++;
+                    b = b.next;
+                    break;
+                    
+                case "12": 
+                    dic++;
+                    b = b.next;
+                    break;
+                
+            }
+        }
+        
+        salesInMonths.add(jan);
+        salesInMonths.add(feb);
+        salesInMonths.add(mar);
+        salesInMonths.add(apr);
+        salesInMonths.add(may);
+        salesInMonths.add(jun);
+        salesInMonths.add(jul);
+        salesInMonths.add(ago);
+        salesInMonths.add(sept);
+        salesInMonths.add(oct);
+        salesInMonths.add(nov);
+        salesInMonths.add(dic);
+        
+        return salesInMonths;
+        
+    }
+    
     public void getInfoFile(){
         File archivo = null;
         FileReader fr = null;
         BufferedReader br = null;
 
         try {
-            archivo = new File("/D:/FinalProject/Proyecto/src/ShoppingHistory/shopHistory.txt");
+            archivo = new File("/Users/eliasvidal/Documents/GitHub/FinalProject/Proyecto/src/ShoppingHistory/shopHistory.txt");
             fr = new FileReader(archivo);
             br = new BufferedReader(fr); //makes fr readable, it sort of translates it.
             

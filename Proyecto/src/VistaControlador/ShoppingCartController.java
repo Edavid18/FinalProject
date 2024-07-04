@@ -76,11 +76,6 @@ public class ShoppingCartController implements Initializable {
         controller.changeLabels(name, price, desc, route, id);
         controller.setShoppingCartController(this);
 
-        /*if (itemsPane.getChildren().isEmpty()) {
-            itemsPane.getChildren().add(shoppingCartItem); // If empty, just add the item
-        }else {
-            itemsPane.getChildren().add(itemsPane.getChildren().size() - 1, shoppingCartItem); // Adds above the last item
-        }*/ 
         itemsPane.getChildren().add(shoppingCartItem);
     }
     

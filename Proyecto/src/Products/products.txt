@@ -83,38 +83,3 @@ RS 270
 539.99
 /images/botes/lb-rs27ew.png
 30
-6013 
-MT 1885
-43000
-/images/botes2/Mt 1885.png
-22
-6008 
-FS 1800
-43500
-/images/botes2/LW_fs1800.png
-33
-6015 
-LB RS270 red
-73000
-/images/botes2/lb-rs27.png
-48
-6007 
-RS 270
-74600
-/images/botes2/lb-115.png
-29
-6009 
-LW Bay 22
-33500
-/images/botes2/LW_bay22.png
-11
-6014 
-RS 270 Blue
-74600
-/images/botes/lb-rs27ew.png
-46
-6020 
-SD 224 Ultra
-75800
-/images/botes2/SD224.png
-16
